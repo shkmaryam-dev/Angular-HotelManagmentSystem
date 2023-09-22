@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-5">
+        <app-racipe-list (racipeWasSelected)="selectedracipe = $event"></app-racipe-list>
+    </div>
+    <div class="col-md-7">
+        <app-racipe-detail
+         *ngIf="selectedracipe; else infoText" [racipe]="selectedracipe">
+        </app-racipe-detail>
+        <ng-template #infoText>
+          <p>Please Select a Racipe!</p>
+        </ng-template>
+    </div>
+</div>

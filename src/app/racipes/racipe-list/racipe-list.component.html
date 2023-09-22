@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Racipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <app-racipe-item
+        *ngFor="let racipeEl of racipes" [racipe]="racipeEl"
+        (racipeSelected)="onRacipeSelected(racipeEl)" ></app-racipe-item>
+    </div>
+</div>
